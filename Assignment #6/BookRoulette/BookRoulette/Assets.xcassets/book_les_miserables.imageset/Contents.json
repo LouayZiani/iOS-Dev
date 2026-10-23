@@ -1,0 +1,12 @@
+{
+  "images": [
+    {
+      "filename": "book_les_miserables.png",
+      "idiom": "universal"
+    }
+  ],
+  "info": {
+    "author": "xcode",
+    "version": 1
+  }
+}

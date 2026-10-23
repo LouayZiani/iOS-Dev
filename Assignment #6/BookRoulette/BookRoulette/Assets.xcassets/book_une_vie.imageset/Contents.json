@@ -1,0 +1,12 @@
+{
+  "images": [
+    {
+      "filename": "book_une_vie.png",
+      "idiom": "universal"
+    }
+  ],
+  "info": {
+    "author": "xcode",
+    "version": 1
+  }
+}
