@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MusicPlayer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="5wQ-LC-xUE" userLabel="rootStack">
+                                <rect key="frame" x="20" y="208" width="374" height="490.5"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Sma-BL-9bZ" userLabel="coverImageView">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="374"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Sma-BL-9bZ" secondAttribute="height" multiplier="1:1" id="1w4-f9-iGA"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="Ezg-uv-Vpz" userLabel="infoStack">
+                                        <rect key="frame" x="0.0" y="398" width="374" height="54.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guele Tapée" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gXG-2K-Laf" userLabel="titleLabel">
+                                                <rect key="frame" x="120" y="0.0" width="134" height="29"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="elGrandeToto" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G8P-GN-OUB" userLabel="artistLabel">
+                                                <rect key="frame" x="139" y="35" width="96.5" height="19.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="p1n-wV-Lg3" userLabel="controlsStack">
+                                        <rect key="frame" x="0.0" y="476.5" width="374" height="14"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rhU-Im-kec" userLabel="previousButton">
+                                                <rect key="frame" x="0.0" y="0.0" width="108.5" height="14"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain"/>
+                                                <connections>
+                                                    <action selector="previousTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RxO-Qg-L17"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mvs-L9-gei" userLabel="playPauseButton">
+                                                <rect key="frame" x="132.5" y="0.0" width="109" height="14"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain"/>
+                                                <connections>
+                                                    <action selector="playPauseTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nfh-jJ-mGS"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m9c-U4-pOw" userLabel="nextButton">
+                                                <rect key="frame" x="265.5" y="0.0" width="108.5" height="14"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain"/>
+                                                <connections>
+                                                    <action selector="nextTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ue7-xo-jcm"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5wQ-LC-xUE" secondAttribute="trailing" constant="20" id="5Jh-PQ-S1p"/>
+                            <constraint firstItem="5wQ-LC-xUE" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="k4q-tf-uC9"/>
+                            <constraint firstItem="5wQ-LC-xUE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="tvU-XI-cEN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="artistLabel" destination="G8P-GN-OUB" id="pJx-p0-doE"/>
+                        <outlet property="coverImageView" destination="Sma-BL-9bZ" id="3LJ-Bi-Tok"/>
+                        <outlet property="nextButton" destination="m9c-U4-pOw" id="ffC-QA-uF1"/>
+                        <outlet property="playPauseButton" destination="mvs-L9-gei" id="eJ6-yc-Poc"/>
+                        <outlet property="previousButton" destination="rhU-Im-kec" id="pEu-pS-CwC"/>
+                        <outlet property="titleLabel" destination="gXG-2K-Laf" id="7Mg-ZW-KRW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="28.985507246376812" y="51.5625"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
