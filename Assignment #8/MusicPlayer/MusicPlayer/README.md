@@ -41,7 +41,7 @@ A single-screen music player built with UIKit, Storyboard, UIStackView, Auto Lay
 ### iPhone 12 Pro
 
 (I am using a VM on windows so I can't use iphone 16 pro since my xocde has an older version)
-![iPhone 12 Pro](Screenshots/iPhone-12.png)
+![iPhone 12 Pro](Screenshots/iPhone-12-Pro.png)
 
 ## Demonstration
 
