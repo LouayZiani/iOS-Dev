@@ -45,7 +45,7 @@ A single-screen music player built with UIKit, Storyboard, UIStackView, Auto Lay
 
 ## Demonstration
 
-[Watch the Music Player demonstration](MusicPlayer-Demo.mov)
+[Watch the Music Player demonstration](MusicPlayer-Demo.mp4)
 
 ## Audio Credits
 
