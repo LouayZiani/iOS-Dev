@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Favorites-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Tbl-Vw-001">
+                                <rect key="frame" x="0.0" y="48" width="414" height="814"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clearsContextBeforeDrawing="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="FavoriteCell" id="Cel-Lf-001" customClass="FavoriteCell" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="414" height="96"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Cel-Lf-001" id="Cnt-Vw-001">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="96"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Img-Vw-001">
+                                                    <rect key="frame" x="16" y="12" width="72" height="72"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="72" id="Img-Wd-001"/>
+                                                        <constraint firstAttribute="height" constant="72" id="Img-Ht-001"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="12"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </imageView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="leading" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Stk-Tx-001">
+                                                    <rect key="frame" x="100" y="12" width="298" height="72"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lbl-Tt-001">
+                                                            <rect key="frame" x="0.0" y="0.0" width="38" height="21.5"/>
+                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lbl-St-001">
+                                                            <rect key="frame" x="0.0" y="25.5" width="50" height="18"/>
+                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                                            <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="Stk-Rt-001">
+                                                            <rect key="frame" x="0.0" y="47.5" width="88" height="16"/>
+                                                            <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Str-00-img">
+                                                        <rect key="frame" x="0" y="0.0" width="16" height="16"/>
+                                                        <color key="tintColor" systemColor="systemOrangeColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="16" id="Str-00-wid"/>
+                                                            <constraint firstAttribute="height" constant="16" id="Str-00-hei"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Str-01-img">
+                                                        <rect key="frame" x="18" y="0.0" width="16" height="16"/>
+                                                        <color key="tintColor" systemColor="systemOrangeColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="16" id="Str-01-wid"/>
+                                                            <constraint firstAttribute="height" constant="16" id="Str-01-hei"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Str-02-img">
+                                                        <rect key="frame" x="36" y="0.0" width="16" height="16"/>
+                                                        <color key="tintColor" systemColor="systemOrangeColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="16" id="Str-02-wid"/>
+                                                            <constraint firstAttribute="height" constant="16" id="Str-02-hei"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Str-03-img">
+                                                        <rect key="frame" x="54" y="0.0" width="16" height="16"/>
+                                                        <color key="tintColor" systemColor="systemOrangeColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="16" id="Str-03-wid"/>
+                                                            <constraint firstAttribute="height" constant="16" id="Str-03-hei"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Str-04-img">
+                                                        <rect key="frame" x="72" y="0.0" width="16" height="16"/>
+                                                        <color key="tintColor" systemColor="systemOrangeColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="16" id="Str-04-wid"/>
+                                                            <constraint firstAttribute="height" constant="16" id="Str-04-hei"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="72" id="Stk-Ht-001"/>
+                                                    </constraints>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Img-Vw-001" firstAttribute="leading" secondItem="Cnt-Vw-001" secondAttribute="leading" constant="16" id="Cns-Il-001"/>
+                                                <constraint firstItem="Img-Vw-001" firstAttribute="centerY" secondItem="Cnt-Vw-001" secondAttribute="centerY" id="Cns-Ic-001"/>
+                                                <constraint firstItem="Stk-Tx-001" firstAttribute="leading" secondItem="Img-Vw-001" secondAttribute="trailing" constant="12" id="Cns-Sl-001"/>
+                                                <constraint firstAttribute="trailing" secondItem="Stk-Tx-001" secondAttribute="trailing" constant="16" id="Cns-St-001"/>
+                                                <constraint firstItem="Stk-Tx-001" firstAttribute="top" secondItem="Cnt-Vw-001" secondAttribute="top" constant="12" id="Cns-Sp-001"/>
+                                                <constraint firstAttribute="bottom" secondItem="Stk-Tx-001" secondAttribute="bottom" constant="12" id="Cns-Sb-001"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="itemImageView" destination="Img-Vw-001" id="Con-Im-001"/>
+                                            <outlet property="subtitleLabel" destination="Lbl-St-001" id="Con-Su-001"/>
+                                            <outlet property="titleLabel" destination="Lbl-Tt-001" id="Con-Ti-001"/>
+                    <outletCollection property="starImageViews" destination="Str-00-img" collectionClass="NSMutableArray" id="Col-00-con"/>
+                    <outletCollection property="starImageViews" destination="Str-01-img" collectionClass="NSMutableArray" id="Col-01-con"/>
+                    <outletCollection property="starImageViews" destination="Str-02-img" collectionClass="NSMutableArray" id="Col-02-con"/>
+                    <outletCollection property="starImageViews" destination="Str-03-img" collectionClass="NSMutableArray" id="Col-03-con"/>
+                    <outletCollection property="starImageViews" destination="Str-04-img" collectionClass="NSMutableArray" id="Col-04-con"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Con-Ds-001"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Tbl-Vw-001" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Tbl-Tp-001"/>
+                            <constraint firstItem="Tbl-Vw-001" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Tbl-Ld-001"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Tbl-Vw-001" secondAttribute="trailing" id="Tbl-Tr-001"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Tbl-Vw-001" secondAttribute="bottom" id="Tbl-Bt-001"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="star" catalog="system" width="128" height="116"/>
+        <image name="star.fill" catalog="system" width="128" height="116"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

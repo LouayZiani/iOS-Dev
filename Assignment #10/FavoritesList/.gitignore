@@ -1,0 +1,21 @@
+# macOS
+.DS_Store
+
+# Xcode
+build/
+DerivedData/
+*.xcuserstate
+*.xcuserdatad/
+xcuserdata/
+*.xccheckout
+*.moved-aside
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+.build/
+
+# Swift Package Manager / CocoaPods / Carthage (not used here, ignored just in case)
+.swiftpm/
+Pods/
+Carthage/Build/
